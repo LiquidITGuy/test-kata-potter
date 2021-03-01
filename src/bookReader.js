@@ -17,5 +17,6 @@ const totalDiscountPrice = (books) => {
   return parseFloat(discountMethod(eligibleBooks.reduce(_sumPrice, 0)).toFixed(2));
 }
 
+const totalPrice = (books) => totalPriceWithoutDiscount(books) - totalDiscountPrice(books)
 
-module.exports = { totalPriceWithoutDiscount, totalDiscountPrice }
+module.exports = { totalPriceWithoutDiscount, totalDiscountPrice, totalPrice }
